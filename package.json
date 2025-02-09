@@ -2,7 +2,7 @@
   "name": "my-react-portfolio",
   "version": "1.0.0",
   "main": "src/index.js",
-"homepage": "https://souravvastri.github.io/about-me/",
+"homepage": "https://souravvastri.run.place",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && copy build\\index.html build\\404.html",
