@@ -1,0 +1,71 @@
+body {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #f4f7f6; /* Light background */
+  color: #333; /* Dark text */
+}
+
+h1, h2, p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem; /* Add space below headings and paragraphs */
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+a {
+  color: #007bff; /* Blue links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design for Tablet and Smaller Screens */
+@media (max-width: 768px) {
+  .ml-6 {
+    margin-left: 1.5rem;
+  }
+
+  .mt-6 {
+    margin-top: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.7rem;  /* Adjust heading size for smaller screens */
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.9rem;  /* Smaller paragraph text */
+  }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;  /* Smaller heading on mobile */
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
