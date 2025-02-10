@@ -13,8 +13,11 @@ const LinkedInProfile = () => {
 
   useEffect(() => {
     localStorage.setItem("profileImage", profileImage);
+  }, [profileImage]);
+
+  useEffect(() => {
     localStorage.setItem("backgroundImage", backgroundImage);
-  }, [profileImage, backgroundImage]);
+  }, [backgroundImage]);
 
   const skills = [
     "Java",
