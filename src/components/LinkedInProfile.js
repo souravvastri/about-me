@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 const LinkedInProfile = () => {
-  const defaultProfile = `${window.location.origin}/profile.jpg`;
-  const defaultBackground = `${window.location.origin}/background.jpg`;
+  const defaultProfile = process.env.PUBLIC_URL + "/profile.jpg";
+  const defaultBackground = process.env.PUBLIC_URL + "/background.jpg";
+  
 
   const [profileImage, setProfileImage] = useState(
     localStorage.getItem("profileImage") || defaultProfile
