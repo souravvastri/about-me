@@ -1,8 +1,8 @@
 body {
   font-family: 'Arial', sans-serif;
   padding: 20px;
-  background-color: #f4f7f6; /* Light background */
-  color: #333; /* Dark text */
+  background-color: #f4f7f6 !important; /* Light background */
+  color: #333 !important; /* Dark text */
 }
 
 h1, h2, p {
@@ -12,11 +12,11 @@ h1, h2, p {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
 }
 
 p {
@@ -34,14 +34,6 @@ a:hover {
 
 /* Responsive Design for Tablet and Smaller Screens */
 @media (max-width: 768px) {
-  .ml-6 {
-    margin-left: 1.5rem;
-  }
-
-  .mt-6 {
-    margin-top: 1.5rem;
-  }
-
   h1 {
     font-size: 1.7rem;  /* Adjust heading size for smaller screens */
   }
@@ -68,4 +60,19 @@ a:hover {
   p {
     font-size: 0.9rem;
   }
+}
+
+/* Buttons */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
 }

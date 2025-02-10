@@ -1,14 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom/client"; // Import for React 18
+import ReactDOM from "react-dom/client"; // ✅ Ensure React 18 uses `createRoot`
 import App from "./App";
-import './styles.css';  // Importing the custom styles
-import './index.css';
+import "./styles.css"; // ✅ Import styles
+import "./index.css";  // ✅ Import Tailwind styles
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// Create root using ReactDOM.createRoot
-const root = ReactDOM.createRoot(document.getElementById("root")); 
-
-root.render(  // Render using the new root API
+root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>

@@ -1,6 +1,6 @@
 import React from "react";
 import LinkedInProfile from "./components/LinkedInProfile";
-import './styles.css';  // Importing custom styles
+import "./styles.css";
 
 const App = () => {
   return (
