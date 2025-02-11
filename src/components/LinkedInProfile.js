@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 const LinkedInProfile = () => {
-  const profileImage = "https://souravvastri.github.io/about-me/assets/profile.jpg";
-  const backgroundImage = "https://souravvastri.github.io/about-me/assets/background.jpg";
+  const profileImage = "/about-me/assets/profile.jpg";
+  const backgroundImage = "/about-me/assets/background.jpg";
   
   console.log("Profile Image Path:", profileImage);
   console.log("Background Image Path:", backgroundImage);
