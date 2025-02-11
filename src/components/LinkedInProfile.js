@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from "react";
 
 const LinkedInProfile = () => {
-  const defaultProfile = `${process.env.PUBLIC_URL}/profile.jpg`;
-  const defaultBackground = `${process.env.PUBLIC_URL}/background.jpg`; // Now using .jpg
+  const profileImage = `${process.env.PUBLIC_URL}/assets/profile.jpg`;
+  const backgroundImage = `${process.env.PUBLIC_URL}/assets/background.jpg`;
   
-  const [profileImage, setProfileImage] = useState(
-    localStorage.getItem("profileImage") || defaultProfile
-  );
-  const [backgroundImage, setBackgroundImage] = useState(
-    localStorage.getItem("backgroundImage") || defaultBackground
-  );
 
+  console.log("Profile Image Path:", profileImage);
+  console.log("Background Image Path:", backgroundImage);
+  
   useEffect(() => {
-    localStorage.setItem("profileImage", profileImage);
+    if (profileImage !== localStorage.getItem("profileImage")) {
+      localStorage.setItem("profileImage", profileImage);
+    }
   }, [profileImage]);
 
   useEffect(() => {
-    localStorage.setItem("backgroundImage", backgroundImage);
+    if (backgroundImage !== localStorage.getItem("backgroundImage")) {
+      localStorage.setItem("backgroundImage", backgroundImage);
+    }
   }, [backgroundImage]);
 
   const skills = [
@@ -34,7 +35,12 @@ const LinkedInProfile = () => {
     <div className="font-sans bg-gray-100 flex justify-center items-center min-h-screen px-6">
       <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="relative h-60 bg-gray-200">
-          <img src={backgroundImage} alt="Cover" className="w-full h-full object-cover" />
+          <img
+            src={backgroundImage}
+            alt="Cover"
+            className="w-full h-full object-cover"
+            onError={(e) => (e.target.src = "/fallback-bg.jpg")}
+          />
         </div>
         <div className="relative flex flex-col sm:flex-row items-center px-6 mt-[-30px] sm:mt-[-40px]">
           <div className="relative">
@@ -42,6 +48,7 @@ const LinkedInProfile = () => {
               src={profileImage}
               alt="Profile"
               className="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-white shadow-md"
+              onError={(e) => (e.target.src = "/fallback.jpg")}
             />
           </div>
 
@@ -84,7 +91,7 @@ const LinkedInProfile = () => {
 
         <div className="px-6 py-4 border-t text-left">
           <h2 className="text-xl font-semibold text-gray-900">Skills</h2>
-          <div className="flex flex-wrap gap-2 mt-2">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mt-2">
             {skills.map((skill) => (
               <span
                 key={skill}
