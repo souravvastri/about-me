@@ -1,23 +1,29 @@
 import React, { useState, useEffect } from "react";
 
 const LinkedInProfile = () => {
-  const profileImage = "/about-me/assets/profile.jpg";
-  const backgroundImage = "/about-me/assets/background.jpg";
-  
-  console.log("Profile Image Path:", profileImage);
-  console.log("Background Image Path:", backgroundImage);
-  
+  // Define fallback images
+  const fallbackImage = "https://souravvastri.run.place/about-me/assets/fallback.jpg";
+  const fallbackBgImage = "https://souravvastri.run.place/about-me/assets/fallback-bg.jpg";
+
+  // ✅ Define state for images
+  const [profileImage, setProfileImage] = useState(
+    localStorage.getItem("profileImage") || fallbackImage
+  );
+  const [backgroundImage, setBackgroundImage] = useState(
+    localStorage.getItem("backgroundImage") || fallbackBgImage
+  );
+
+  // ✅ Set images in localStorage when they change
   useEffect(() => {
-    if (profileImage !== localStorage.getItem("profileImage")) {
-      localStorage.setItem("profileImage", profileImage);
-    }
+    localStorage.setItem("profileImage", profileImage);
   }, [profileImage]);
 
   useEffect(() => {
-    if (backgroundImage !== localStorage.getItem("backgroundImage")) {
-      localStorage.setItem("backgroundImage", backgroundImage);
-    }
+    localStorage.setItem("backgroundImage", backgroundImage);
   }, [backgroundImage]);
+
+  console.log("Profile Image Path:", profileImage);
+  console.log("Background Image Path:", backgroundImage);
 
   const skills = [
     "Java",
@@ -38,7 +44,7 @@ const LinkedInProfile = () => {
             src={backgroundImage}
             alt="Cover"
             className="w-full h-full object-cover"
-            onError={(e) => (e.target.src = "/fallback-bg.jpg")}
+            onError={(e) => setBackgroundImage(fallbackBgImage)}
           />
         </div>
         <div className="relative flex flex-col sm:flex-row items-center px-6 mt-[-30px] sm:mt-[-40px]">
@@ -47,7 +53,7 @@ const LinkedInProfile = () => {
               src={profileImage}
               alt="Profile"
               className="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-white shadow-md"
-              onError={(e) => (e.target.src = "/fallback.jpg")}
+              onError={(e) => setProfileImage(fallbackImage)}
             />
           </div>
 
