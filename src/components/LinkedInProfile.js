@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 
 const LinkedInProfile = () => {
   // Define fallback images
-  const fallbackImage = "https://souravvastri.run.place/about-me/assets/fallback.jpg";
-  const fallbackBgImage = "https://souravvastri.run.place/about-me/assets/fallback-bg.jpg";
-
+  const fallbackImage = "/about-me/assets/fallback.jpg"; 
+  const fallbackBgImage = "/about-me/assets/fallback-bg.jpg"; 
+  
   // ✅ Define state for images
   const [profileImage, setProfileImage] = useState(
     localStorage.getItem("profileImage") || fallbackImage
