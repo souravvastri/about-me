@@ -4,7 +4,8 @@ const LinkedInProfile = () => {
   const profileImage = `${process.env.PUBLIC_URL}/assets/profile.jpg`;
   const backgroundImage = `${process.env.PUBLIC_URL}/assets/background.jpg`;
   
-
+  
+  
   console.log("Profile Image Path:", profileImage);
   console.log("Background Image Path:", backgroundImage);
   
