@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My personal portfolio built with React and Tailwind CSS.",
   "main": "src/index.js",
-"homepage": "http://souravvastri.run.place/about-me/",
+"homepage": "https://souravvastri.github.io/about-me/",
 "scripts": {
   "start": "react-scripts start",
    "build": "react-scripts build && cpx build/index.html build/404.html",
