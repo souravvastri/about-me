@@ -3,15 +3,13 @@
   "version": "1.0.0",
   "description": "My personal portfolio built with React and Tailwind CSS.",
   "main": "src/index.js",
-"homepage": "https://souravvastri.github.io/about-me/",
-"scripts": {
-  "start": "react-scripts start",
-   "build": "react-scripts build && cpx build/index.html build/404.html",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-},
+  "homepage": "https://souravvastri.run.place",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && rm -rf docs/* && mv build/* docs/",
+    "predeploy": "npm run build",
+    "deploy": "git add docs && git commit -m 'Deploy to GitHub Pages' && git push origin main"
+  },
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
