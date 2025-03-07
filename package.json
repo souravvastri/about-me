@@ -9,7 +9,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build && rimraf docs/* && xcopy build\\* docs\\ /E /H /K",
     "predeploy": "npm run build",
-    "deploy": "git add docs && git commit -m 'Deploy to GitHub Pages' && git push origin main"
+"deploy": "git add docs && git commit -m 'Deploy to GitHub Pages' && git push origin main"
   },
   "dependencies": {
     "react": "^18.0.0",
