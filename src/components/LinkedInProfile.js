@@ -136,7 +136,7 @@ const LinkedInProfile = () => {
         <img
           src={backgroundImage}
           alt="Abstract software development workspace"
-          className="absolute inset-0 h-full w-full object-cover opacity-55"
+          className="absolute inset-0 h-full w-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-slate-950/70 to-blue-950/55" />
 
