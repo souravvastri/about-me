@@ -148,12 +148,18 @@ const LinkedInProfile = () => {
           />
 
           <div>
-            <p className="mb-3 inline-flex rounded-full border border-blue-300/30 bg-blue-400/10 px-4 py-2 text-sm font-medium text-blue-100">
-              Senior Software Developer · Full-Stack & Backend Engineering
-            </p>
+            <div className="mb-5 flex flex-wrap items-center gap-3">
+              <span className="h-px w-12 bg-blue-300" />
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-blue-100">
+                Senior Software Developer
+              </p>
+            </div>
             <h1 className="max-w-4xl text-4xl font-bold tracking-tight text-white md:text-6xl">
               Sourav Vastri
             </h1>
+            <p className="mt-4 text-xl font-semibold text-blue-100 md:text-2xl">
+              Full-Stack & Backend Engineer
+            </p>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-200">
               I build production-ready web, SaaS, FinTech, AI/ML, IoT,
               automation and cloud-based applications using Java, Spring Boot,
