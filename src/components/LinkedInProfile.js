@@ -140,38 +140,39 @@ const LinkedInProfile = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-slate-950/70 to-blue-950/55" />
 
-        <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-6 py-16 md:flex-row md:items-center md:py-24">
+        <div className="relative mx-auto grid min-h-[720px] max-w-6xl gap-8 px-5 py-14 sm:px-6 md:min-h-[640px] md:grid-cols-[240px_1fr] md:items-center md:gap-12 md:py-20 lg:min-h-[720px]">
           <img
             src={profileImage}
             alt="Sourav Vastri"
-            className="h-32 w-32 rounded-3xl border-4 border-white/20 object-cover shadow-2xl md:h-40 md:w-40"
+            className="mx-auto h-32 w-32 rounded-3xl border-4 border-white/20 object-cover shadow-2xl sm:h-36 sm:w-36 md:mx-0 md:h-52 md:w-52 lg:h-60 lg:w-60"
           />
 
-          <div>
-            <div className="mb-5 flex flex-wrap items-center gap-3">
-              <span className="h-px w-12 bg-blue-300" />
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-blue-100">
+          <div className="text-center md:text-left">
+            <div className="mb-4 flex flex-wrap items-center justify-center gap-3 md:justify-start">
+              <span className="hidden h-px w-12 bg-blue-300 sm:block" />
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-100 sm:text-sm sm:tracking-[0.28em]">
                 Senior Software Developer
               </p>
+              <span className="hidden h-px w-12 bg-blue-300 sm:block md:hidden" />
             </div>
-            <h1 className="max-w-4xl text-4xl font-bold tracking-tight text-white md:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
               Sourav Vastri
             </h1>
-            <p className="mt-4 text-xl font-semibold text-blue-100 md:text-2xl">
+            <p className="mt-3 text-lg font-semibold text-blue-100 sm:text-xl md:text-2xl">
               Full-Stack & Backend Engineer
             </p>
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-200">
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-slate-200 sm:text-lg sm:leading-8 md:mx-0">
               I build production-ready web, SaaS, FinTech, AI/ML, IoT,
               automation and cloud-based applications using Java, Spring Boot,
               Python, Django, PHP, Node.js, React, AWS and modern backend
               architecture.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center md:justify-start">
               <a
                 href="https://github.com/souravvastri"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-blue-100"
+                className="rounded-full bg-white px-5 py-3 text-center text-sm font-semibold text-slate-950 transition hover:bg-blue-100"
               >
                 GitHub Profile
               </a>
@@ -179,11 +180,11 @@ const LinkedInProfile = () => {
                 href="https://linkedin.com/in/sourav-vastri-5b23bb34b"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                className="rounded-full border border-white/30 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-white/10"
               >
                 LinkedIn Profile
               </a>
-              <span className="rounded-full border border-blue-300/40 px-5 py-3 text-sm font-semibold text-blue-100">
+              <span className="rounded-full border border-blue-300/40 px-5 py-3 text-center text-sm font-semibold text-blue-100">
                 Available for Software Projects
               </span>
             </div>
